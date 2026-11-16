@@ -1,0 +1,30 @@
+-- Ejercicios adicionales para que el generador funcione con mancuernas en casa y solo peso corporal.
+-- Se puede ejecutar varias veces (on conflict do nothing).
+insert into exercises (slug, name, muscle, pattern, equipment, level, rank, glute_emphasis, sets, reps, rest_s, instructions) values
+('sentadilla-peso-corporal','Sentadilla con peso corporal','Piernas','squat','{peso_corporal}',1,4,3,3,'15-20',45,'Pies al ancho de hombros y pecho erguido. Baja con la cadera hacia atrás hasta el paralelo y sube empujando el suelo.'),
+('peso-muerto-una-pierna','Peso muerto a una pierna','Isquios y glúteos','hinge','{peso_corporal}',2,4,5,3,'8-12',60,'De pie sobre una pierna, inclina el torso al frente mientras la otra pierna sube atrás. Vuelve apretando el glúteo.'),
+('buenos-dias-banda','Buenos días con banda','Isquios y glúteos','hinge','{banda}',1,3,4,3,'12-15',45,'Pisa la banda y colócala sobre la espalda alta. Lleva la cadera atrás con la espalda neutra y sube apretando glúteos.'),
+('puente-una-pierna','Puente de glúteos a una pierna','Glúteos','hip_thrust','{peso_corporal}',2,4,5,3,'10-15',45,'Boca arriba con un pie apoyado y la otra pierna estirada. Sube la cadera apretando el glúteo y baja con control.'),
+('hip-thrust-mancuerna','Hip thrust con mancuerna','Glúteos','hip_thrust','{mancuernas,banco}',1,3,5,3,'10-12',60,'Espalda alta en el banco y la mancuerna sobre la cadera. Sube hasta alinear rodillas, cadera y hombros y aprieta arriba.'),
+('curl-isquios-deslizamiento','Curl de isquios con deslizamiento','Isquios','ham_curl','{peso_corporal}',1,3,2,3,'8-12',60,'Boca arriba con los talones sobre una toalla en suelo liso. Sube la cadera, desliza los talones hacia ti y vuelve despacio.'),
+('curl-femoral-banda','Curl femoral con banda','Isquios','ham_curl','{banda}',1,2,2,3,'12-15',45,'Boca abajo con la banda anclada y enganchada en los talones. Lleva el talón hacia el glúteo y baja lento.'),
+('curl-femoral-sentado','Curl femoral sentado','Isquios','ham_curl','{maquina}',1,2,2,3,'10-12',60,'Sentado en la máquina con el cojín sobre los tobillos. Flexiona las rodillas y vuelve con control.'),
+('sentadilla-pared','Sentadilla isométrica en pared','Cuádriceps','quad_isolation','{peso_corporal}',1,3,2,3,'30-45 s',45,'Espalda pegada a la pared y muslos paralelos al suelo. Mantén la posición respirando con calma.'),
+('sentadilla-sissy-asistida','Sentadilla sissy asistida','Cuádriceps','quad_isolation','{peso_corporal}',2,4,1,3,'8-12',60,'Sujétate de un apoyo, sube los talones y lleva las rodillas al frente mientras el torso se inclina hacia atrás.'),
+('step-up','Subida al banco (step-up)','Piernas y glúteos','lunge','{mancuernas,banco}',1,4,4,3,'10-12',60,'Con mancuernas, sube al banco empujando con el talón de la pierna de arriba y baja con control.'),
+('jalon-banda','Jalón con banda','Espalda','vertical_pull','{banda}',1,4,1,3,'12-15',60,'Banda anclada arriba. Tira de ella hacia el pecho llevando los codos abajo y juntando las escápulas.'),
+('pullover-mancuerna','Pullover con mancuerna','Espalda','vertical_pull','{mancuernas,banco}',1,5,1,3,'10-12',60,'Tumbado en el banco, lleva la mancuerna desde detrás de la cabeza hasta el pecho con los brazos casi rectos.'),
+('remo-banda','Remo con banda','Espalda','horizontal_pull','{banda}',1,4,1,3,'12-15',60,'Sentado con la banda en los pies o anclada al frente. Tira hacia el abdomen juntando las escápulas.'),
+('remo-invertido','Remo invertido bajo una mesa','Espalda','horizontal_pull','{peso_corporal}',2,5,1,3,'6-12',75,'Bajo una mesa resistente, agarra el borde y lleva el pecho hacia él con el cuerpo en línea recta.'),
+('press-hombro-banda','Press de hombro con banda','Hombros','vertical_push','{banda}',1,3,1,3,'12-15',60,'Pisa la banda y empuja desde los hombros hasta estirar los brazos sobre la cabeza.'),
+('flexiones-pica','Flexiones en pica','Hombros','vertical_push','{peso_corporal}',2,4,1,3,'6-12',75,'Cadera alta formando una V invertida. Baja la cabeza hacia el suelo flexionando los codos y empuja.'),
+('elevaciones-laterales-banda','Elevaciones laterales con banda','Hombros','lateral_raise','{banda}',1,2,1,3,'12-15',45,'Pisa la banda y sube los brazos a los lados hasta la altura de los hombros sin balancear el cuerpo.'),
+('curl-biceps-banda','Curl de bíceps con banda','Bíceps','biceps','{banda}',1,3,1,3,'12-15',45,'Pisa la banda y flexiona los codos llevando las manos a los hombros, sin mover los codos.'),
+('curl-martillo','Curl martillo con mancuernas','Bíceps','biceps','{mancuernas}',1,2,1,3,'10-12',45,'Con las palmas enfrentadas, sube las mancuernas flexionando los codos y baja despacio.'),
+('extension-triceps-mancuerna','Extensión de tríceps sobre la cabeza','Tríceps','triceps','{mancuernas}',1,2,1,3,'10-12',45,'Sujeta una mancuerna con ambas manos sobre la cabeza y flexiona los codos llevándola detrás de la nuca; sube estirando.'),
+('press-frances-mancuernas','Press francés con mancuernas','Tríceps','triceps','{mancuernas,banco}',2,3,1,3,'8-12',60,'Tumbado en el banco, flexiona los codos bajando las mancuernas hacia la frente y extiende de nuevo.'),
+('extension-triceps-banda','Extensión de tríceps con banda','Tríceps','triceps','{banda}',1,3,1,3,'12-15',45,'Banda anclada arriba. Con los codos pegados al cuerpo, empuja hacia abajo hasta estirar los brazos.'),
+('fondos-banco','Fondos en banco','Tríceps','triceps','{banco,peso_corporal}',1,4,1,3,'8-15',60,'Manos en el borde del banco y pies al frente. Flexiona los codos hacia atrás y empuja para subir.'),
+('bicho-muerto','Bicho muerto','Core','core','{peso_corporal}',1,3,1,3,'10-12',45,'Boca arriba, brazos y rodillas al aire. Estira brazo y pierna contrarios sin despegar la zona lumbar del suelo.'),
+('plancha-lateral','Plancha lateral','Core','core','{peso_corporal}',1,4,1,3,'20-30 s',45,'Apoyado en un antebrazo, eleva la cadera y mantén el cuerpo en línea recta de cabeza a pies.')
+on conflict (slug) do nothing;
